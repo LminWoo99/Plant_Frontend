@@ -1,0 +1,97 @@
+* {
+	white-space: pre-wrap;
+	color: #04B486;
+}
+
+.bg-light {
+    background-color: #04B486 !important;
+}
+.app-container {
+	background-color: #edfbf4;
+	height: 100vh;
+	background-size: cover;
+	margin: 0 auto;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  }
+textarea {
+    background-color: transparent;
+    resize: none;
+    outline: none;
+	border-radius: 20px;
+	padding: 20px;
+}
+
+.profile-img {
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	background-color: #e9ecef;
+}
+
+.comment {
+	border-radius: 20px;
+	background-color: #e9ecef;
+	padding: 20px;
+}
+
+.comment-div {
+	width: 100%;
+	margin: auto;
+}
+
+span.comment-id {
+	font-weight: bold;
+	margin-top: 8px;
+	font-size: 15px;
+}
+
+span.del-span {
+	color: #c21807;
+}
+
+span.bbs-title {
+	color: #04B486;
+}
+
+.pagination > li > a
+{
+    background-color: white;
+    color:  #212529 !important;
+}
+
+.pagination > .active > a {
+	background-color: #212529;
+    color: #ffffff !important;
+}
+
+.pagination > .active > a:hover {
+	background-color: #212529;
+    color: white;
+	border: solid 1px #212529 !important;
+}
+
+.pagination > .active {
+	background-color: #212529 !important;
+    color: #ffffff;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+    color: black;
+    border-color: #ddd;
+}
+
+
+.pagination > .active > a:hover
+{
+    background-color: #212529 !important;
+	color: #ffffff;
+    border: solid 1px #ffffff;
+}

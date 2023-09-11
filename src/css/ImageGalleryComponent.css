@@ -1,0 +1,40 @@
+/* ImageGalleryComponent.css */
+.image-gallery-description {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: black;
+    
+  }
+/* 이미지 갤러리 전체 컨테이너 스타일 */
+.image-gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: aqua;
+    height: 100%; /* 전체 높이를 100%로 설정 */
+  }
+  
+  /* 이미지 갤러리 커스텀 스타일 */
+  .image-gallery-custom {
+    width: 50%; /* 원하는 가로 폭으로 설정 */
+    max-width: 600px; /* 최대 가로 폭 설정 */
+    padding-right: 100px;
+    margin: auto; /* 가운데 정렬 */
+  }
+  
+  /* 이미지 갤러리 내부 이미지 스타일 */
+  .image-gallery-image {
+    max-height: 400px; /* 이미지 높이 제한 설정 */
+    object-fit: contain; /* 이미지 크기 고정 */
+  }
+  
+  /* 이미지 갤러리 내부 이미지 캡션 스타일 */
+ 
+  
+  /* 이미지 갤러리 내부 화살표 버튼 스타일 */
+  .image-gallery-left-nav,
+  .image-gallery-right-nav {
+    top: calc(50% - 20px); /* 화살표 버튼을 수직 가운데로 조정 */
+  }
+  

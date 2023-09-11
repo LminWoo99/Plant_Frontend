@@ -1,0 +1,26 @@
+/* Comment.css (추가) */
+
+.comment-container {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.reply-toggle {
+  margin-top: 10px;
+}
+
+.reply-form {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #f5f5f5;
+  
+}
+
+.reply-container {
+  margin: 10px 0 0 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}

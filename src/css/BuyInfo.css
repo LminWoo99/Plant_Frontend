@@ -1,0 +1,45 @@
+
+
+.buyinfo-container {
+    padding: 20px;
+  }
+  
+  .buyinfo-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .buyinfo-item {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .buyinfo-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .bbs-title {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .item-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .item-status {
+    color: #007bff;
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+  
+  .item-date {
+    font-size: 12px;
+    color: #666;
+  }
+  

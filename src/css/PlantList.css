@@ -1,0 +1,12 @@
+.search__input {
+    
+    width: 80%;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: -0.8px;
+    color: #000;
+    border: none;
+    padding: 10.5px 18px 10.5px 21px;
+    border-bottom: 1px solid #000;
+    margin-bottom: 26.5px;
+  }

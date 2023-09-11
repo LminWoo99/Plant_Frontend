@@ -1,0 +1,20 @@
+.logo {
+  position: relative;
+  bottom: 10px;
+  
+  width: 80px; /* 이미지의 가로 크기 조절 */
+  height: 80px; /* 이미지의 세로 크기 조절 */
+}
+.header {
+    display: flex; /* Flexbox 사용 */
+    align-items: center; /* 수직 가운데 정렬 */
+    position: relative;
+    height: 140px;
+    color: #04B486;
+    
+  }
+
+.title {
+    align-items: center;
+    
+}

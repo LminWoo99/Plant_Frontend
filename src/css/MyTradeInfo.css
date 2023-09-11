@@ -1,0 +1,57 @@
+.my-trade-info {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .tabs {
+    
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .tab {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  .tab.active {
+    background-color: #f0f0f0;
+  }
+  
+  .trade-list {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .trade-card {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .title {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .bbs-title {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .status {
+    color: #28a745;
+    margin-bottom: 3px;
+  }
+  
+  .created-at {
+    color: #666;
+  }
+  
+  p {
+    color: #666;
+  }
+  

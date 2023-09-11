@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  font-family: 'happy', sans-serif;
+  color: #04B486;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #EFFBF5;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+@font-face {
+  font-family: "happy";
+  src: url("./fonts/DNFBitBitTTF.ttf");
+}
