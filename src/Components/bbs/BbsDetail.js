@@ -14,11 +14,11 @@ function BbsDetail() {
 	const { auth, setAuth } = useContext(AuthContext)
 
 	const [tradeBoardDto, setTradeBoardDto] = useState({});
-	const { id } = useParams(); // 파라미터 가져오기
+	const { id } = useParams(); 
 	const [tradeId, setTradeId]=useState(0);
 
 	const [view, setView] = useState(0);
-	const [replyList, setReplyList] = useState([]); // 대댓글 목록 상태 추가
+	const [replyList, setReplyList] = useState([]); 
 
 	const [memberId, setMemberId] = useState(0);
 	const [price, setPrice] = useState();
@@ -42,11 +42,11 @@ function BbsDetail() {
 	}
 
     const getImageUrls = async () => {
-        await axios.get(`http://localhost:8080/api/${id}/images`)
+        await axios.get(`/api/${id}/images`)
             .then((resp) => {
                 console.log("[image.js] getImageUrls() success :D");
                 console.log(resp);
-				const imageUrls = resp.data.map(item => item.url); // 이미지 URL 추출
+				const imageUrls = resp.data.map(item => item.url); 
 
 				console.log(imageUrls);
 				setImageUrls(imageUrls)
@@ -59,7 +59,7 @@ function BbsDetail() {
 
 	const getBbsDetail = async () => {
 
-		await axios.get(`http://localhost:8080/api/list/${id}`)
+		await axios.get(`/api/list/${id}`)
 		.then((resp) => {
 			console.log("[BbsDetail.js] getBbsDetail() success :D");
 			console.log(resp.data)
@@ -82,7 +82,7 @@ function BbsDetail() {
 	}
 	const getBbsView = async () => {
 		await axios
-		  .get(`http://localhost:8080/api/read/${id}`)
+		  .get(`/api/read/${id}`)
 		  .then((resp) => {
 			console.log("[BbsDetail.js] getBbsView() success :D");
 			setView(resp.data); // view 값 업데이트
@@ -95,7 +95,7 @@ function BbsDetail() {
 
 	const deleteBbs = async () => {
 
-		await axios.delete(`http://localhost:8080/api/list/${id}`)
+		await axios.delete(`/api/list/${id}`)
 		.then((resp) => {
 			console.log("[BbsDetail.js] deleteBbs() success :D");
 			console.log(resp.data);
@@ -125,7 +125,7 @@ function BbsDetail() {
 	
 			if (!goodStatus) {
 				const response = await axios.post(
-					`http://localhost:8080/api/goods/${memberId}`,
+					`/api/goods/${memberId}`,
 					goodsRequestDto
 				);
 	
@@ -137,7 +137,7 @@ function BbsDetail() {
 			}
 			else{
 				const response = await axios.post(
-					`http://localhost:8080/api/goods/${memberId}`,
+					`/api/goods/${memberId}`,
 					goodsRequestDto
 				);
 			// 찜 취소되었을 때 상태 업데이트
@@ -150,7 +150,7 @@ function BbsDetail() {
 		}
 	};
     const getReplyList = async () => {
-        await axios.get(`http://localhost:8080/api/comment/reply` , { params: { "tradeBoardId": id}} )
+        await axios.get(`/api/comment/reply` , { params: { "tradeBoardId": id}} )
             .then((resp) => {
                 console.log("[BbsDetail.js] getReplyList() success :D");
                 console.log(resp.data);
@@ -165,7 +165,7 @@ function BbsDetail() {
     };
 	const getGoodsStatus = async () => {
 		try {
-			const response = await axios.get(`http://localhost:8080/api/goods/status`, {
+			const response = await axios.get(`/api/goods/status`, {
 				params: { "memberId": localStorage.getItem("id"), "tradeBoardId": id },
 			});
 

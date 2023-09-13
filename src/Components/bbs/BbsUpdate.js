@@ -14,7 +14,7 @@ function BbsUpdate() {
   const location = useLocation();
   const { tradeBoardDto } = location.state;
 
-  // 거래 상태 선택을 위한 state
+  
   const [status, setStatus] = useState(tradeBoardDto.status);
 
   const [id, setId] = useState(tradeBoardDto.id);
@@ -50,7 +50,7 @@ console.log(status);
     };
 
     await axios
-      .put(`http://localhost:8080/api/list/${tradeBoardDto.id}`, req, {
+      .put(`/api/list/${tradeBoardDto.id}`, req, {
         headers: headers,
       })
       .then((resp) => {

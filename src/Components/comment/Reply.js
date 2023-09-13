@@ -22,7 +22,7 @@ console.log(reply);
         };
 
         await axios
-            .put(`http://localhost:8080/api/comment/${reply.id}`, req, { headers: headers })
+            .put(`/api/comment/${reply.id}`, req, { headers: headers })
             .then((resp) => {
                 console.log("[Reply.js] updateReply() success :D");
                 console.log(reply.id);
@@ -37,7 +37,7 @@ console.log(reply);
 
     const deleteReply = async () => {
         await axios
-            .delete(`http://localhost:8080/api/comment/${reply.id}`)
+            .delete(`/api/comment/${reply.id}`)
             .then((resp) => {
                 console.log("[Reply.js] deleteReply() success :D");
                 alert("대댓글을 성공적으로 삭제했습니다 :D");

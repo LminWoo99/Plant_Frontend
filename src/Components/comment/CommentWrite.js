@@ -33,7 +33,7 @@ function CommentWrite(props) {
     };
 	console.log(requestDto);
     await axios
-      .post(`http://localhost:8080/api/comment`, requestDto, { headers: headers })
+      .post(`/api/comment`, requestDto, { headers: headers })
       .then((resp) => {
         console.log("[CommentWrite.js] createComment() success :D");
         console.log(resp.data);

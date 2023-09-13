@@ -17,7 +17,7 @@ function BuyInfo() {
 
   const fetchBuyInfo = async (id) => {
     try {
-      const response = await axios.get(`http://localhost:8080/api/buyInfo/${id}`);
+      const response = await axios.get(`/api/buyInfo/${id}`);
       setBuyInfo(response.data);
       console.log(response);
     } catch (error) {

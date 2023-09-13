@@ -20,7 +20,7 @@ function EmailVerification() {
 
   const sendEmailVerification = async () => {
     try {
-      const response = await axios.post("http://localhost:8080/api/mailConfirm", {
+      const response = await axios.post("/api/mailConfirm", {
         email: email,
       });
       const code = response.data;

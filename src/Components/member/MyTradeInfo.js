@@ -18,7 +18,7 @@ function MyTradeInfo() {
 
   const fetchTradeList = async (id) => {
     try {
-      const response = await axios.get(`http://localhost:8080/api/tradeInfo/${id}`);
+      const response = await axios.get(`/api/tradeInfo/${id}`);
       setTradeList(response.data);
       console.log(response);
     } catch (error) {

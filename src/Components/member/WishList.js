@@ -17,7 +17,7 @@ function WishList() {
 
   const fetchWishlist = async (id) => {
     try {
-      const response = await axios.get(`http://localhost:8080/api/goods/${id}`);
+      const response = await axios.get(`/api/goods/${id}`);
       setWishlist(response.data);
       console.log(response);
     } catch (error) {

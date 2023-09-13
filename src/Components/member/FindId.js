@@ -12,7 +12,7 @@ function FindId() {
 
   const handleFindId = async () => {
     try {
-      const response = await axios.get(`http://localhost:8080/api/findId?email=${email}`);
+      const response = await axios.get(`/api/findId?email=${email}`);
       const { username } = response.data.username;
       console.log(response.data.username);
       setFoundId(response.data.username);

@@ -39,7 +39,7 @@ function Comment(props) {
 	  };
   console.log(req);
 	  await axios
-		.put(`http://localhost:8080/api/comment/${comment.id}`, req, { headers: headers })
+		.put(`/api/comment/${comment.id}`, req, { headers: headers })
 		.then((resp) => {
 		  console.log("[Comment.js] updateComment() success :D");
 		  console.log(resp);
@@ -59,7 +59,7 @@ function Comment(props) {
   
 	const deleteComment = async () => {
 	  await axios
-		.delete(`http://localhost:8080/api/comment/${comment.id}`)
+		.delete(`/api/comment/${comment.id}`)
 		.then((resp) => {
 		  console.log("[BbsComment.js] deleteComment() success :D");
 		  console.log(resp.data);

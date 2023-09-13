@@ -10,7 +10,7 @@ function PlantDetail() {
   useEffect(() => {
     async function fetchPlantDetail() {
       try {
-        const response = await axios.get(`http://localhost:8080/api/plantList/${id}`);
+        const response = await axios.get(`/api/plantList/${id}`);
         setPlantDto(response.data);
       } catch (error) {
         console.error("[PlantDetail.js] fetchPlantDetail() error:", error);

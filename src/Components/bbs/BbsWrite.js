@@ -26,9 +26,9 @@ function BbsWrite() {
     const changeContent = (event) => {
         setContent(event.target.value);
     };
-	const changePrice = (event) => { // 가격 입력 변경 핸들러
-        const inputPrice = event.target.value.replace(/[^0-9]/g, ""); // 숫자만 추출
-        const formattedPrice = inputPrice.replace(/\B(?=(\d{3})+(?!\d))/g, ","); // 천 단위마다 콤마 추가
+	const changePrice = (event) => { 
+        const inputPrice = event.target.value.replace(/[^0-9]/g, ""); 
+        const formattedPrice = inputPrice.replace(/\B(?=(\d{3})+(?!\d))/g, ","); 
         setPrice(formattedPrice);
     };
     const createBbs = async () => {
@@ -51,7 +51,7 @@ function BbsWrite() {
 
         try {
             const response = await axios.post(
-                "http://localhost:8080/api/write",
+                "/api/write",
                 tradeBoardDto,
                 { headers: headers }
             );
@@ -71,7 +71,7 @@ function BbsWrite() {
 
         try {
             await axios.post(
-                `http://localhost:8080/api/${tradeBoardId}/images`,
+                `/api/${tradeBoardId}/images`,
                 formData
             );
             alert("새로운 게시글을 성공적으로 등록했습니다 :D");

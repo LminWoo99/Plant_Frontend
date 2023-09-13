@@ -40,7 +40,7 @@ function Login() {
 			password: password
 		}
 
-		await axios.post("http://localhost:8080/api/login", req)
+		await axios.post("/api/login", req)
 		.then((resp) => {
 			console.log("[Login.js] login() success :D");
 			console.log(resp.data);

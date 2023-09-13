@@ -16,7 +16,7 @@ function PlantList() {
 
   const loadPlants = () => {
     axios
-      .get(`http://localhost:8080/api/plantList?search=${searchVal}&page=${pageable-1}`)
+      .get(`/api/plantList?search=${searchVal}&page=${pageable-1}`)
       .then((response) => {
         setPlants(response.data.content);
         setTotalCnt(response.data.totalElements);

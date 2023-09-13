@@ -20,7 +20,7 @@ function CommentList(props) {
 	}
 
 	const getCommentList = async (pageable) => {
-		await axios.get(`http://localhost:8080/api/comment`, { params: { "tradeBoardId": tradeBoardId, "pageable": pageable-1 } })
+		await axios.get(`/api/comment`, { params: { "tradeBoardId": tradeBoardId, "pageable": pageable-1 } })
 			.then((resp) => {
 				console.log("[BbsComment.js] getCommentList() success :D");
 				console.log(resp.data);

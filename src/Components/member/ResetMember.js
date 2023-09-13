@@ -27,7 +27,7 @@ function ResetPassword() {
 
   const handleFindUser = async () => {
     try {
-      const response = await axios.get(`http://localhost:8080/api/findPassword?userId=${userId}`);
+      const response = await axios.get(`/api/findPassword?userId=${userId}`);
       const memberDto = response.data;
 
       if (!memberDto) {
@@ -45,7 +45,7 @@ function ResetPassword() {
 
   const handleResetPassword = async () => {
     try {
-      const response = await axios.get(`http://localhost:8080/api/findPassword?userId=${userId}`);
+      const response = await axios.get(`/api/findPassword?userId=${userId}`);
       const memberDto = response.data;
   
       if (newPassword !== confirmPassword) {
@@ -54,7 +54,7 @@ function ResetPassword() {
       } else {
         memberDto.password = newPassword;
   
-        await axios.post("http://localhost:8080/api/findPassword", memberDto);
+        await axios.post("/api/findPassword", memberDto);
   
         setSuccessMessage("비밀번호가 재설정되었습니다.");
         setErrorMessage("");

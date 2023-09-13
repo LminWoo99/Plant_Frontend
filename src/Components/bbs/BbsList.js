@@ -11,22 +11,19 @@ function BbsList() {
 	const [tradeBoardDtos, setTradeBoardDtos] = useState([]);
 	const { auth, setAuth } = useContext(AuthContext)
 
-	// 검색용 Hook
+
 	
 	const [searchVal, setSearchVal] = useState("");
 
-	// Paging
+
 	const [pageable, setPageable] = useState(1);
 	const [totalCnt, setTotalCnt] = useState(0);
 
-	// Link 용 (함수) 
+	
 	let navigate = useNavigate();
 
-
-
-	/* [GET /bbs]: 게시글 목록 */
 	const getBbsList = async (search, pageable) => {
-		await axios.get("http://localhost:8080/api/write", { params: { "search": search, "page": pageable-1 } })
+		await axios.get("/api/write", { params: { "search": search, "page": pageable-1 } })
 			.then((resp) => {
 				console.log("[BbsList.js] useEffect() success :D");
 				console.log(resp.data);
