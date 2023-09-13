@@ -18,7 +18,7 @@ const { headers, setHeaders } = useContext(HttpHeadersContext);
         const kakaoLogin = async () => {
             await axios({
                 method: "GET",
-                url: `/api/oauth2/login/kakao/?code=${code}`,
+                url: `/oauth2/login/kakao/?code=${code}`,
                 headers: {
                     "Content-Type": "application/json;charset=utf-8",
                 
