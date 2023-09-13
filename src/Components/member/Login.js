@@ -30,9 +30,6 @@ function Login() {
 	const changePwd = (event) => {
 		setPassword(event.target.value);
 	}
-	const kakaoLogin = () => {
-		navigate("/kakao");
-	}
 	const login = async () => {
 
 		const req = {
