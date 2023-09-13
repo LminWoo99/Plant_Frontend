@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.852fc095.css",
-    "main.js": "/static/js/main.fb2c07a1.js",
+    "main.js": "/static/js/main.9deece70.js",
     "static/js/787.bc184b84.chunk.js": "/static/js/787.bc184b84.chunk.js",
     "static/media/DNFBitBitTTF.ttf": "/static/media/DNFBitBitTTF.60278e3e9aaa53efd625.ttf",
     "static/media/스크린샷 2023-09-04 오후 6.41.40.png": "/static/media/스크린샷 2023-09-04 오후 6.41.40.d6946a1c5bfbeee733f4.png",
     "static/media/plant.png": "/static/media/plant.31e27cf1f2e89794bf6b.png",
     "index.html": "/index.html",
     "main.852fc095.css.map": "/static/css/main.852fc095.css.map",
-    "main.fb2c07a1.js.map": "/static/js/main.fb2c07a1.js.map",
+    "main.9deece70.js.map": "/static/js/main.9deece70.js.map",
     "787.bc184b84.chunk.js.map": "/static/js/787.bc184b84.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.852fc095.css",
-    "static/js/main.fb2c07a1.js"
+    "static/js/main.9deece70.js"
   ]
 }
