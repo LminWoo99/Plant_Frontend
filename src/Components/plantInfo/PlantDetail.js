@@ -202,7 +202,7 @@ const SeasonalWateringInfo = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
   border-collapse: collapse;
   
 `;
