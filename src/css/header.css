@@ -1,7 +1,7 @@
 .logo {
   position: relative;
   bottom: 10px;
-  
+  margin-top: 80px;
   width: 80px; /* 이미지의 가로 크기 조절 */
   height: 80px; /* 이미지의 세로 크기 조절 */
 }
@@ -9,7 +9,7 @@
     display: flex; /* Flexbox 사용 */
     align-items: center; /* 수직 가운데 정렬 */
     position: relative;
-    height: 140px;
+    height: 240px;
     color: #04B486;
     
   }
