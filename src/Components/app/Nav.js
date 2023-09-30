@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthProvider";
 import { Link } from "react-router-dom";
-import MyTradeInfo from "../member/MyTradeInfo"; // 이 부분은 경로에 맞게 수정해주세요
+import MyTradeInfo from "../member/MyTradeInfo"; 
 import "../../css/nav.css";
 
 function Nav() {
@@ -10,7 +10,7 @@ function Nav() {
 
  
   const toggleMyFamily = () => {
-    setShowMyFamily(prevShowMyFamily => !prevShowMyFamily); // 이 부분 수정
+    setShowMyFamily(prevShowMyFamily => !prevShowMyFamily); 
   };
 
   return (

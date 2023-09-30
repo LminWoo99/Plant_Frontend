@@ -16,13 +16,6 @@ function App() {
         
         <Header />
         
-
-
-
-
-
-
-        
         <AuthProvider>
           <HttpHeadersProvider>
             <Nav />

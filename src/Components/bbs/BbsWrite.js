@@ -3,11 +3,13 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthProvider";
 import { HttpHeadersContext } from "../context/HttpHeadersProvider";
-
+import tokenUtil from "../member/tokenUtil";
+import useTokenUtil from "../member/tokenUtil";
 function BbsWrite() {
     const { auth } = useContext(AuthContext);
     const { headers } = useContext(HttpHeadersContext);
 
+    const tokenUtil=useTokenUtil();
     const navigate = useNavigate();
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
@@ -60,8 +62,28 @@ function BbsWrite() {
             uploadImages(tradeBoardId);
         } catch (error) {
             console.log("[BbsWrite.js] createBbs() error :", error);
+            console.log(error.response.status)
+            if (error.response.status === 403 ){
+                try {
+                    const newAccessToken = await tokenUtil.refreshAccessToken();
+                    console.log(headers);
+                    const response = await axios.post(
+                        "/api/write",
+                        tradeBoardDto,
+                        { headers: headers }
+                    );
+
+                    const tradeBoardId = response.data.id;
+                    uploadImages(tradeBoardId);
+                } catch (refreshError) {
+                    console.error('액세스 토큰 갱신 실패:', refreshError);
+                }
+            } else {
+                console.error("[BbsWrite.js] createBbs() error :", error);
+            }
+            }
         }
-    };
+    
 
     async function uploadImages(tradeBoardId) {
         const formData = new FormData();

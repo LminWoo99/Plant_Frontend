@@ -64,6 +64,9 @@ console.log(status);
         if (status === '거래완료') {
           navigate(`/bbsbuyer/${tradeBoardDto.id}`);
         }
+        else{
+          navigate(`/bbsdetail/${tradeBoardDto.id}`);
+        }
       })
       .catch((err) => {
         console.log("[BbsUpdate.js] updateBbs() error :<");

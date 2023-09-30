@@ -8,6 +8,8 @@ import { HttpHeadersContext } from "../context/HttpHeadersProvider";
 import myImage from './kakao_login_small.png';
 import { Link } from "react-router-dom";
 import '../../css/style.css';
+import { Cookies } from 'react-cookie';
+
 const CLIENT_ID = process.env.REACT_APP_REST_API_KEY;
 const REDIRECT_URI = process.env.REACT_APP_REDIRECT_URL;
 
@@ -22,7 +24,9 @@ function Login() {
 
 	const [username, setusername] = useState("");
 	const [password, setPassword] = useState("");
-	
+
+	const cookies=new Cookies();
+
 	const changeId = (event) => {
 		setusername(event.target.value);
 	}
@@ -44,12 +48,17 @@ function Login() {
 
 				alert(resp.data.username + "님, 성공적으로 로그인 되었습니다 🔐");
 
+				const expirationTimeMillis = Date.now() + 10 * 60 * 1000;
+				
+
 				// JWT 토큰 저장
 				localStorage.setItem("id", parseInt(resp.data.id));
 				localStorage.setItem("bbs_access_token", resp.data.access_token);
+				localStorage.setItem("bbs_access_token_exp", expirationTimeMillis.toString());
 				localStorage.setItem("username", resp.data.nickname);
-				
-				
+				cookies.set('bbs_refresh_token', resp.data.refresh_token, { path: '/' });
+			
+
 				setAuth(resp.data.id); // 사용자 인증 정보(아이디 저장)
 				setHeaders({"Authorization": `Bearer ${resp.data.jwt}`}); // 헤더 Authorization 필드 저장
 				
@@ -63,6 +72,7 @@ function Login() {
 			alert("⚠️ " + err.response.data);
 		});
 	}
+	
 
 	return (
 		<div>

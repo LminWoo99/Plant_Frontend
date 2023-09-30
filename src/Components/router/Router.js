@@ -18,12 +18,14 @@ import BuyerSelection from "../bbs/BuyerSelection";
 import FindId from "../member/FindId";
 import ResetPassword from "../member/ResetMember";
 import BuyInfo from "../member/BuyInfo";
+import BbsVer from "../bbs/BbsVer";
 
 
 function Router() {
 
 	return (
 			<Routes>
+				<Route path="/api" element={<BbsVer />}></Route>
 				<Route path="/" element={<Home />}></Route>
 				<Route path="/oauth2/login/kakao" element={<LoginHandler />}></Route>
 				<Route path="/findId" element={<FindId />}></Route>
